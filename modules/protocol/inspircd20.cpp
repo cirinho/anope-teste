@@ -596,6 +596,10 @@ struct IRCDMessageCapab : Message::Capab
 					um = new UserMode("CENSOR", modechar[0]);
 				else if (modename.equals_cs("u_registered"))
 					um = new UserModeNoone("REGISTERED", modechar[0]);
+
+                                else if (modename.equals_cs("u_services_zombie"))
+                                        um = new UserModeNoone("ZOMBIE", modechar[0]);
+
 				else if (modename.equals_cs("u_stripcolor"))
 					um = new UserMode("STRIPCOLOR", modechar[0]);
 				else if (modename.equals_cs("wallops"))
